@@ -47,16 +47,15 @@ class Index extends React.Component {
                 <nav ref = "mythreeDiv" className={nav}>
                     <ul ref = "myfourDiv" className={menuNav}>
                         <li ref = "myfiveDiv" className={navItems}>
-                        <Link to = "/Index"><a className="menu-nav__link" >
+                        <Link to = "/Index">
                             Home
-                            </a></Link>
+                            </Link>
                         </li>
-                        
                         <li ref = "myfiveDiv" className={navItems}>
-                            <a className="menu-nav__link" >
+                            
                             <Link to = "/About">About Me</Link>
-                            </a>
-                        </li>
+                            
+                        {/* </li>
                         <li ref = "myfiveDiv" className={navItems}>
                             <a href="Projects.html" className="menu-nav__link" >
                                 My Projects
@@ -65,7 +64,7 @@ class Index extends React.Component {
                         <li ref = "myfiveDiv" className={navItems}>
                             <a href="Contact.html" className="menu-nav__link" >
                                 Contact Me
-                            </a>
+                            </a> */}
                         </li>
                     </ul>
                 </nav>

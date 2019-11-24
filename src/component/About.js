@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {Link} from 'react-router-dom'
 import '../scss/_about.scss'
 import '../scss/main.scss'
 
@@ -44,24 +45,10 @@ class About extends React.Component {
                     <nav ref="mythreeDiv" className={nav}>
                         <ul ref="myfourDiv" className={menuNav}>
                             <li ref="myfiveDiv" className={navItems}>
-                                <a href="Index.js" className="menu-nav__link" >
-                                    Home
-                            </a>
+                                 <Link to = "/Index">Home</Link>
                             </li>
                             <li ref="myfiveDiv" className={navItems}>
-                                <a href='About.js' className="menu-nav__link" >
-                                    About Me
-                            </a>
-                            </li>
-                            <li ref="myfiveDiv" className={navItems}>
-                                <a href="Projects.html" className="menu-nav__link" >
-                                    My Projects
-                            </a>
-                            </li>
-                            <li ref="myfiveDiv" className={navItems}>
-                                <a href="Contact.html" className="menu-nav__link" >
-                                    Contact Me
-                            </a>
+                                <Link to = "/Index">About Me</Link>
                             </li>
                         </ul>
                     </nav>
