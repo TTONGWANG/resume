@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Switch>
         {/* <Index /> */}
-        <Route exact Path="/"> <About /></Route>
+        <Route exact Path="/"> <Index /></Route>
         <Route Path="/Index"> <Index /></Route>
         <Route Path="/About"> <About /></Route>
       </Switch>
