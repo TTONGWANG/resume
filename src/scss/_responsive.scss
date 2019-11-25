@@ -1,0 +1,134 @@
+@include media-md{
+    .menu-btn {
+        position: absolute;
+        z-index: 1;   //keep it always up
+        height: 20px;
+        width: 28px;
+        cursor: pointer;
+        @include transition-ease;
+      
+        &__burger {
+          position: absolute;
+          right: 0;
+          top: 0.5rem;
+          font-size: 2rem;
+          @include transition-ease;
+    
+          &.open {
+            transform: rotate(450deg);
+    
+          }
+        }
+    }
+    .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0.98;
+    visibility: hidden;
+    z-index: 3;
+    &.open {
+      visibility: visible;
+    }
+  
+    .menu-nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      background: $primary-color;
+      list-style-type: none;
+      padding-right: 1rem;
+      transform: translateY(-100%);
+      @include transition-ease;
+  
+      &.open {
+        transform: translateY(0);
+      }
+  
+      &__item {
+        transform: translateX(100vw);
+        @include transition-ease;
+  
+        &.open {
+         transform: translateX(0); 
+        }
+  
+        &.active > a {
+          color: $secondary-color;
+        }
+      }
+  
+      &__link {
+        display: inline-block;
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        font-weight: 300;
+        @include transition-ease;
+  
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+    .jobs{
+        margin: 2rem auto 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        &__job{
+            width: 25rem;
+            height:15rem;
+            margin-bottom: 2rem;
+            background: lighten($primary-color, 10%);  //10% lighten of primary-color
+            padding:0.5rem;
+            border-left: 2px solid $secondary-color;
+            z-index: 1;
+        }
+    }
+    .about__bio{
+         font-size: 1rem;
+    }
+    .projects{
+        &__bio-image{
+            height: 40vh;
+        }
+        &__items{
+            grid-template-columns: repeat(1,1fr);
+        }
+        .text-secondary{
+            font-size: 3rem;
+        }
+    }
+
+    // .contact__list{
+    //     grid-template-columns: repeat(1,1fr);
+    // }
+}
+
+// @include media-lg{
+//     //     .about__bio{
+//     //     font-size: 1.5rem;
+//     // }
+
+//     .projects{
+//         &__items{
+//             grid-template-columns: repeat(3,1fr);
+//         }
+
+//     }
+//     .contact__list{
+//         grid-template-columns: repeat(3,1fr);
+//     }
+// }
+
+// @include media-xl{
+//     .projects__bio-image{
+//         height: 50vh;
+//     }
+// }

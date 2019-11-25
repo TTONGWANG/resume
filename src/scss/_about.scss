@@ -1,7 +1,5 @@
-@import './config';
 .about{
     padding-bottom: 2rem;
-
     &__bio-image{
         height:50vh;
         width: 100%;
@@ -11,7 +9,7 @@
             rgba($primary-color,0.9),
             rgba($primary-color, 0.3)
         ),
-        url('../img//model-1.jpg') center top; //?? why top
+        url('../img//model-1.jpg') center top; 
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -25,27 +23,34 @@
     &__bio{
         width: 80%;
         text-align: center;
+        font-size: 1.5rem;
         .text-secondary{
             padding-bottom:1rem;
+            
         }
     }
 
     .jobs{
-        width: 60vw;
         margin: 2rem auto 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        display: flex;
+        justify-content: center;
 
         &__job{
-            background: lighten($primary-color, 10%);
+            width: 25rem;
+            height:15rem;
+            margin-left: 2rem;
+            background: lighten($primary-color, 10%);  //10% lighten of primary-color
             padding:0.5rem;
-            border-bottom: 5px solid $secondary-color;
+            border-left: 2px solid $secondary-color;
+            
             h2,h3{
                 margin: 0.5rem 0;
             }
             h6{
                 margin:0.3rem 0;
+            }
+            &:hover{
+                transform: translateY(-5px);
             }
         }
     }
