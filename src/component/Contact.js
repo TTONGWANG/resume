@@ -17,15 +17,15 @@ function Contact() {
                     <h2>Contact Me..</h2>
                     <div className="contact__list">
                         <div className="contact__email">
-                            <i className="github"><FontAwesomeIcon icon={faEnvelopeSquare} /></i> Email
+                            <i ><FontAwesomeIcon icon={faEnvelopeSquare} /></i> Email
                                <a href = "mailto:tongwang.sp@gmail.com"> <div className="text-secondary">tongwang.sp@gmail.com</div></a>
                         </div>
                         <div className="contact__phone">
-                            <i className="github"><FontAwesomeIcon icon={faPhone} /></i> Phone
+                            <i ><FontAwesomeIcon icon={faPhone} /></i> Phone
                                 <div className="text-secondary">0416875556</div>
                         </div>
                         <div className="contact__address">
-                            <i className="github"><FontAwesomeIcon icon={faAddressCard} /></i> Address
+                            <i ><FontAwesomeIcon icon={faAddressCard} /></i> Address
                                 <div className="text-secondary">2 Shore line,Rhodes,Sydney</div>
                         </div>
                     </div>

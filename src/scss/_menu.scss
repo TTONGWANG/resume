@@ -7,70 +7,69 @@
     @include transition-ease;
   
     &__burger {
-      position: absolute;
-      right: 0;
-      top: 0.5rem;
-      font-size: 2rem;
-      @include transition-ease;
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        font-size: 2rem;
+        @include transition-ease;
 
-      &.open {
-        transform: rotate(450deg);
+        &.open {
+            transform: rotate(450deg);
 
-      }
+        }
     }
 }
   
-  .nav {
-    position: fixed;
+.nav {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     opacity: 0.98;
-    // visibility: hidden;
+    visibility: hidden;
   
     &.open {
        visibility: visible;
     }
   
     .menu-nav {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      justify-content: center;
-    //height: 100%;
-      height:5rem;
-      overflow: hidden;
-      background: $primary-color;
-      list-style-type: none;
-      padding-right: 1rem;
-      transform: translateX(-100%);  //over the page
-      @include transition-ease;
-  
-      &.open {
-        transform: translateX(0);    //come in to the page
-      }
-  
-       &__item {
-         display: inline-block;
-         font-size: 1.5rem;
-         text-transform: uppercase;
-         padding: 2rem 0;
-         transform: translateX(100vw);  //the most right position
-         @include transition-ease;
-        &:hover {
-           color: $secondary-color;
-         }
-         &.open {
-          transform: translateX(0); 
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height:5rem;
+        overflow: hidden;
+        background: $primary-color;
+        list-style-type: none;
+        padding-right: 1rem;
+        transform: translateX(-100%);  //the background over the page
+        @include transition-ease;
+    
+        &.open {
+            transform: translateX(0);    //come in to the page
+        }
+    
+        &__item {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            transform: translateX(100vw);  //the most right position
+            @include transition-ease;
 
-         }
+            &:hover {
+                color: $secondary-color;
+            }
+
+            &.open {
+                transform: translateX(0); 
+            }
         }
     }
-  }
+}
 
-  @for $i from 1 through 4 {
-        .menu-nav__item:nth-child(#{$i}){
-            transition-delay: ($i * 0.1s) + 0.15;
-        }
-  }
+@for $i from 1 through 4 {
+    .menu-nav__item:nth-child(#{$i}){
+        transition-delay: ($i * 0.1s) + 0.15;
+    }
+}
   

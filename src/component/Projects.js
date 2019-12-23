@@ -9,97 +9,60 @@ import projectimg5 from '../img/project-5.jpg'
 import projectimg6 from '../img/project-6.jpg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
+import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import {faSearch} from  '@fortawesome/free-solid-svg-icons'
 // import Main from './Main'
 
 import '../scss/main.scss'
 
-function Projects() {
-
+function Projects () {
     return (
         <body>
-            <Navbar />
+            <Navbar />  
             <main>
                 <section className="projects">
                     <div className="projects__bio-image">
-                        <h1 className="text-secondary">My Projects</h1>
+                       <h1 className = "text-secondary">My Projects</h1>
                     </div>
 
-                    <div className="projects__items">
-                        <div className="projects__item">
-                            <img src={projectimg1} alt="My project" />
-                            <div className="projects__btns">
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Preview
+                    <div className = "projects__items">
+                        <div className = "projects__items__item">
+                            <img src = {projectimg1} alt = "My project"/>
+                            <div className = "projects__btns">
+                                <a href = "#!" className = "projects__btn">
+                                    <i className="github"><FontAwesomeIcon icon={faSearch} /></i>Preview
                                 </a>
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Github
-                                </a>
+                                <a href = "#!" className = "projects__btn">
+                                    <i className="github"><FontAwesomeIcon icon={faGithub} /></i>Github
+                                </a>                                
                             </div>
                         </div>
 
-                        <div className="projects__item">
-                            <img src={projectimg2} alt="My project" />
-                            <div className="projects__btns">
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Preview
+                        <div className = "projects__items__item">
+                            <img src = {projectimg2}  alt = "My project"/>
+                            <div className = "projects__btns">
+                                <a href = "#!" className = "projects__btn">
+                                    <i className="github"><FontAwesomeIcon icon={faSearch} /></i>Preview
                                 </a>
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Github
-                                </a>
+                                <a href = "#!" className = "projects__btn">
+                                    <i className="github"><FontAwesomeIcon icon={faGithub} /></i>Github
+                                </a>                                
                             </div>
                         </div>
 
-                        <div className="projects__item">
-                            <img src={projectimg3} alt="My project" />
-                            <div className="projects__btns">
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Preview
+                        <div className = "projects__items__item">
+                            <img src = {projectimg3}  alt = "My project"/>
+                            <div className = "projects__btns">
+                                <a href = "#!" className = "projects__btn">
+                                    <i className="github"><FontAwesomeIcon icon={faSearch} /></i>Preview
                                 </a>
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Github
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="projects__item">
-                            <img src={projectimg4} alt="My project" />
-                            <div className="projects__btns">
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Preview
-                                </a>
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Github
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="projects__item">
-                            <img src={projectimg5} alt="My project" />
-                            <div className="projects__btns">
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Preview
-                                </a>
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Github
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="projects__item">
-                            <img src={projectimg6} alt="My project" />
-                            <div className="projects__btns">
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Preview
-                                </a>
-                                <a href="#!" className="projects__btn">
-                                    <i className="github"><FontAwesomeIcon icon={faCoffee} /></i>Github
-                                </a>
+                                <a href = "#!" className = "projects__btn">
+                                    <i className="github"><FontAwesomeIcon icon={faGithub} /></i>Github
+                                </a>                                
                             </div>
                         </div>
                     </div>
-                    <Footer />
+                    <Footer/>
                 </section>
             </main>
         </body>

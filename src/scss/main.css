@@ -26,7 +26,6 @@
 
 .home__name--last {
   color: #1ea1d9;
-  font-weight: 700;
 }
 
 .menu-btn {
@@ -54,11 +53,12 @@
 }
 
 .nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   opacity: 0.98;
+  visibility: hidden;
 }
 
 .nav.open {
@@ -96,7 +96,6 @@
 }
 
 .nav .menu-nav__item {
-  display: inline-block;
   font-size: 1.5rem;
   text-transform: uppercase;
   padding: 2rem 0;
@@ -233,7 +232,7 @@
 }
 
 .projects__bio-image {
-  height: 30vh;
+  height: 40vh;
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img//model-1.jpg") center top;
   background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img//model-1.jpg") center top;
@@ -268,28 +267,39 @@
   grid-gap: 2rem;
 }
 
-.projects__item {
+.projects__items__item {
   position: relative;
   border-bottom: 5px solid #1ea1d9;
-  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.projects__item img {
+.projects__items__item img {
   width: 100%;
 }
 
-.projects__item:hover {
+.projects__items__item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #1ea1d9;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.projects__items__item:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-.projects__item:hover::after {
+.projects__items__item:hover::after {
   top: 0;
   opacity: 0.9;
-}
-
-.projects__item:hover .projects__btn {
-  opacity: 1;
 }
 
 .projects__btns {
@@ -306,17 +316,6 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-}
-
-.projects__btn {
-  opacity: 0;
-  color: #000;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.projects__btn:hover {
-  color: #fff;
 }
 
 .projects .social-icons {
@@ -361,8 +360,8 @@
 .contact__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: 1;
+      grid-template-columns: 1;
   grid-gap: 2rem;
   font-size: 1.5rem;
 }
