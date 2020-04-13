@@ -1,0 +1,20 @@
+.social-icons{
+    position: fixed;
+    left:1rem;
+    bottom: 1rem;
+    font-size: 2rem;
+
+    &__icon{
+        padding: 0.5rem;
+        @include transition-ease;
+        &:hover {
+          color: $secondary-color;
+        }
+    }
+}
+footer{
+    font-size: 1rem;
+    position: fixed;
+    right:2rem;
+    bottom: 2rem;
+}
