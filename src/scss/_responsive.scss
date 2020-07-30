@@ -14,10 +14,12 @@
             font-size: 1rem;
         }
         &__jobs{
-            margin: 2rem auto 0 auto;
+            margin: 1rem auto 0 auto;
             display: flex;
             flex-direction: column;
             &__job{
+                width: 20rem;
+                margin-left: 0rem;
                 margin-bottom: 2rem;  
             }
         }
@@ -26,18 +28,56 @@
         &__items{
             grid-template-columns: repeat(1,1fr);
         }
+        &__item {
+            position: relative;
+            border-bottom: 5px solid $secondary-color;
+            overflow: hidden;
+            cursor: pointer;
+        
+            img {
+              width: 100%;
+            }
+        
+            &::after {
+              content: '';
+              position: absolute;
+              top: 100%;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              background: $secondary-color;
+              opacity: 0;
+              @include transition-ease;
+            }
+        
+            &:hover {
+              &::after {
+                top: 0;
+                opacity: 0.9;
+              }
+              .projects__btn {
+                opacity: 1;
+              }
+            }
+          }
+        
     }
 
+    // .social-icons{
+    //   display:flex;
+    //   flex-direction: column;
+    //   z-index: 1;
+    // }
     .social-icons{
-      display:flex;
-      flex-direction: column;
-      z-index: 1;
+        display: none;
+        
     }
 
     footer{
       transform:
         rotate(90deg)
         translate(-3rem,-5rem);
+    
     }
 }
 
